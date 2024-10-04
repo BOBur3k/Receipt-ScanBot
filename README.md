@@ -26,37 +26,39 @@ This is a Python-based Telegram bot that allows users to send pictures of receip
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/receipt-bot.git
-   cd receipt-bot
+      git clone https://github.com/your-username/receipt-bot.git
+      cd receipt-bot
 
 2. **Set up Python Virtual Environment:**
-    '''bash
-    python -m venv venv
-    source venv/Scripts/activate  # On Windows
-    # OR
-    source venv/bin/activate      # On Linux/Mac
-
+   ```bash
+   python -m venv venv
+   source venv/Scripts/activate  # On Windows
+   # OR
+   source venv/bin/activate      # On Linux/Mac
+   
 3. **Install the required dependencies:**
-    '''bash
-    pip install -r requirements.txt
+   ```bash
+   pip install -r requirements.txt
 
 4. **Set up the environment variables:**
-- Create a .env file in the root directory of your project with the following contents: 
-    '''bash 
-    TELEGRAM_BOT_TOKEN=your-telegram-bot-token
-    OCR_SPACE_API_KEY=your-ocr-space-api-key
-    OPENAI_API_KEY=your-openai-api-key
-- Replace your-telegram-bot-token, your-ocr-space-api-key, and your-openai-api-key with the actual API keys and tokens from the respective services.
+   - Create a `.env` file in the root directory of your project with the following contents:
+     ```
+     TELEGRAM_BOT_TOKEN=your-telegram-bot-token
+     OCR_SPACE_API_KEY=your-ocr-space-api-key
+     OPENAI_API_KEY=your-openai-api-key
+     ```
+   - Replace `your-telegram-bot-token`, `your-ocr-space-api-key`, and `your-openai-api-key` with the actual API keys and tokens from the respective services.
+  
+5. **Run the bot:**
+   ```bash
+   python bot.py
 
-5. **Run the bot:** 
-    '''bash
-    python bot.py
+## Interacting with the bot
 
-6. **Interacting with the bot**:
-   - Send the `/start` command to begin interacting with the bot.
-   - Upload a picture of your receipt.
-   - After the bot processes the image, you can choose whether to upload another receipt or receive the final Excel file.
-   - Once all receipts are processed, the bot will compile the information into a downloadable Excel file and send it to you.
+1. Send the `/start` command to begin interacting with the bot.
+2. Upload a picture of your receipt.
+3. After the bot processes the image, you can choose whether to upload another receipt or receive the final Excel file.
+4. Once all receipts are processed, the bot will compile the information into a downloadable Excel file and send it to you.
 
 ## How It Works
 
@@ -71,3 +73,4 @@ This is a Python-based Telegram bot that allows users to send pictures of receip
 
 4. **Multiple Receipts**:
    - The bot allows the user to process multiple receipts, which are all compiled into a single Excel file that the user can download.
+
